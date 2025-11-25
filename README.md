@@ -21,8 +21,9 @@ Redis 6.0+（可选，用于权限缓存）
 
 # 快速开始
 ## 1. 克隆代码
-```git clone https://github.com/zka-2004/YingguanCloud.git
-cd yingguan-cloud```
+```bash
+git clone https://github.com/zka-2004/YingguanCloud.git
+cd yingguan-cloud
 
 ## 2. 配置数据库
 新建MySQL数据库（编码格式：utf8mb4）
