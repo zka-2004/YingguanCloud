@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: service-system
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher  # 强制使用旧的Ant风格路径匹配，兼容springfox
+

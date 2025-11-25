@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zka.mapper.SysMovieMapper">
+    <select id="selectPage" resultType="org.zka.model.vo.SysMovieVo">
+        SELECT
+        m.id, m.name, m.cid, m.description, m.keyword,
+        m.director, m.actor, m.image, m.type, m.url,
+        m.play_id,m.create_time,m.update_time,m.is_deleted, c.name as category_name
+        FROM sys_movie as m
+        JOIN sys_category as c ON m.cid = c.id
+        <where>
+            <if test="vo.name != null and vo.name != ''">
+                <!-- 使用别名m引用sys_movie表的字段 -->
+                and m.name like CONCAT('%', #{vo.name}, '%')
+            </if>
+            <!-- 同样使用别名m引用is_deleted字段 -->
+            and m.is_deleted = 0
+        </where>
+        order by id desc
+    </select>
+</mapper>

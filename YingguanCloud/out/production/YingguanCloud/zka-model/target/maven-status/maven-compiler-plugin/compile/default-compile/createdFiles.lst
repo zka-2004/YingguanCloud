@@ -1,0 +1,10 @@
+com\zka\model\vo\SysRoleQueryVo.class
+com\zka\model\vo\SysUserQueryVo.class
+com\zka\model\entity\SysUser.class
+com\zka\model\vo\AssignMenuVo.class
+com\zka\model\vo\AssignRoleVo.class
+com\zka\model\base\BaseEntity.class
+com\zka\model\entity\SysRole.class
+com\zka\model\entity\SysUserRole.class
+com\zka\model\entity\SysRoleMenu.class
+com\zka\model\entity\SysMenu.class
